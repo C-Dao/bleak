@@ -206,7 +206,6 @@ a {
 
 
 	em, i {
-		font-weight: 400;
 		font-style: italic;
 		color: $color-gray-25;
 
@@ -285,8 +284,8 @@ a {
 			display: block;
 			border: 0;
 			padding: 1.5em;
-			padding-left: 4em;
 			margin: -1em;
+			margin-left: 2em;
 			white-space: inherit;
 			overflow-x: auto;
 			background: $color-gray-90;
@@ -337,6 +336,7 @@ a {
 		margin: 2em 0;
 		background-color: transparent;
 		border: 1px solid $color-gray-90;
+		border-collapse: collapse;
 	}
 
 	table th,
@@ -372,6 +372,40 @@ a {
 		iframe {
 			margin: auto;
 		}
+	}
+}
+
+.avatar {
+	position: relative;
+	overflow: hidden;
+	background: $color-gray-90;
+	margin: 0;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		z-index: 1;
+		width: 50%;
+		height: 50%;
+		bottom: 35%;
+		left: 25%;
+		border-radius: 100%;
+		background: $color-gray-85;
+	}
+
+	&:after {
+		width: 100%;
+		bottom: -25%;
+		left: 0;
+	}
+
+	img {
+		position: relative;
+		z-index: 2;
+		display: block;
+		width: 100%;
+		height: auto;
 	}
 }
 
@@ -966,7 +1000,6 @@ body {
 		overflow: hidden;
 		border-radius: 3em;
 		border: 2px solid $color-primary-default;
-		background: $color-primary-active;
 
 		img {
 			width: 100%;
