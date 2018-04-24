@@ -1589,6 +1589,7 @@ body {
 	clear: both;
 	margin: 4em 0;
 	padding: 2.5em;
+	height: 6em;
 	background: #fff;
 
 	@media only screen and (max-width: $breakpoint-phone) {
@@ -1605,10 +1606,11 @@ body {
 		overflow: hidden;
 
 		@media only screen and (max-width: $breakpoint-phone) {
-			float: none;
+			float: left;
 			width: 4em;
 			height: 4em;
 			margin-bottom: 1em;
+			margin-top: 1em;
 		}
 
 		img {
@@ -1623,13 +1625,14 @@ body {
 		padding-left: 8em;
 
 		@media only screen and (max-width: $breakpoint-phone) {
-			padding-left: 0;
+			padding-left: 4em;
 		}
 
 		.post-author-name {
 			font-size: 1.25em;
 			line-height: 1.2em;
 			margin-top: 0;
+			padding: 2em;
 			margin-bottom: 0;
 			font-weight: 800;
 			color: $color-gray-25;
